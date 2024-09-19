@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install",
-    "release": "standard-version"
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+     "release": "npm run changelog && git add CHANGELOG.md && git commit -m 'docs: update changelog' && standard-version"
   },
   "keywords": [],
   "author": "",
